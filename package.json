@@ -1,0 +1,18 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "^17.5.2",
+    "inert": "^5.1.0",
+    "load-json-file": "^5.0.0",
+    "mustache": "^2.3.0",
+    "write-json-file": "^2.3.0"
+  }
+}
