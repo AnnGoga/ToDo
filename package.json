@@ -13,6 +13,7 @@
     "inert": "^5.1.0",
     "load-json-file": "^5.0.0",
     "mustache": "^2.3.0",
+    "socket.io": "^2.1.1",
     "write-json-file": "^2.3.0"
   }
 }

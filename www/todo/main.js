@@ -1,5 +1,11 @@
 let test;
 
+var socket = io('http://159.65.83.148');
+socket.on('update', function (data) {
+	console.log('WS: ' + data);
+	//socket.emit('my other event', { my: 'data' });
+});
+
 // INITIALISATION
 $(document).ready(function() {
 	// LOADING DEFAULT UNEDITABLE ELEMENTS
@@ -53,14 +59,15 @@ function applyEvents(id){
 // RENDER
 let tmpl_block = $('#tmpl-block').html();
 
-function blockRender(id, text, noteditable){
-	let noteditableText = 'contenteditable="true"';
-	let notdeletableText = '';
-	if(noteditable){
-		noteditableText = '';
-		notdeletableText = 'inv';
+function blockRender(id, text, notEditable){
+	let notEditableText = 'contenteditable="true"';
+	let notDeletableText = '';
+	if(notEditable){
+		notEditableText = '';
+		notDeletableText = 'inv';
 	}
 
 	Mustache.parse(tmpl_block);
-	return Mustache.render(tmpl_block, {id: id, text: text, notdeletableText: noteditableText, notdeletableText: notdeletableText});
-}
+	return Mustache.render(tmpl_block, {id: id, text: text, notEditableText: notEditableText, notDeletableText: notDeletableText});
+} 
+
